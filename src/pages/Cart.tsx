@@ -6,7 +6,7 @@ import { useAppSelector } from "../redux/hooks";
 import getAllProducts from "../data/products";
 
 const Cart = () => {
-//   const products = getAllProducts();
+  //   const products = getAllProducts();
 
   const products = useAppSelector((store) => store.cart.products);
   return (
@@ -18,7 +18,7 @@ const Cart = () => {
               <CartDetails key={product.id} product={product} />
             ))
           ) : (
-            <p className="text-2xl text-red-500"> not product found</p>
+            <p className="text-2xl text-red-500"> not product found here</p>
           )}
         </div>
         <OrderSummary />
